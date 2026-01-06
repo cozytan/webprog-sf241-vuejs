@@ -2,7 +2,7 @@
   const app = Vue.createApp({
    data() {
     return {
-     message: "hahaha"
+     Hahappy New Year: "hahaha"
     }
    }
   })
@@ -10,3 +10,4 @@
   app.mount('#app')
 
 </script>
+
