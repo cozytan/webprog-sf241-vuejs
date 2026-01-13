@@ -1,88 +1,29 @@
-/* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #202124; /* Dark mode background */
+body {
+    background-color: #fff9ad; /* Spongebob Yellow */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
-#app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #febd01;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-/* Chrome Window Container */
-.chrome-window {
-    width: 80%;
-    max-width: 1000px;
-    height: 80vh;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Top Bar / Tabs */
-.chrome-header {
-    background-color: #dee1e6;
-    padding: 8px 8px 0 8px;
-    display: flex;
-    align-items: flex-end;
-}
-
-.tab {
+.card {
     background: white;
-    padding: 8px 30px;
-    border-radius: 8px 8px 0 0;
-    font-size: 12px;
-    width: fit-content;
-    color: #3c4043;
-}
-
-/* Address Bar Area */
-.address-bar-container {
-    background: white;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.address-bar {
-    background: #f1f3f4;
-    height: 28px;
-    border-radius: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    color: #5f6368;
-    font-size: 13px;
-}
-
-/* Content Area */
-.chrome-content {
-    flex-grow: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    background-color: #fff;
-}
-
-.sukuna-img {
-    max-width: 400px;
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: 1; /* Helps the boxes grow equally */
+    min-width: 250px;
 }
 
-.caption {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #1a73e8;
-    font-weight: bold;
-}
+h1 { color: #e87a00; }
+h2 { border-bottom: 2px solid #fff9ad; padding-bottom: 5px; }

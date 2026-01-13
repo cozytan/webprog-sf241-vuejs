@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klein De Guzman</title>
+    <title>Spongebob Profile</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex-layout.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="main.js"></script>
+    <div id="app" class="main-container">
+        <header class="flex-column-center">
+            <img :src="profileImage" alt="Profile" class="avatar">
+            <h1>{{ name }}</h1>
+        </header>
+
+        <main class="flex-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <p>{{ about }}</p>
+            </section>
+
+            <section class="card">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li v-for="hobby in hobbies" :key="hobby">{{ hobby }}</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Education</h2>
+                <p>{{ education }}</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

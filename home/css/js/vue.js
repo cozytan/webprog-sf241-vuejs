@@ -1,29 +1,17 @@
-const { createApp } = Vue;
+const { createApp } = Vue
 
 createApp({
     data() {
         return {
-            imageUrl: 'https://wallpapercave.com/wp/wp8253134.jpg', // Placeholder Sukuna image
-            imageAlt: 'Ryomen Sukuna',
-            description: 'Testing lang'
+            name: "Spongebob Squarepants",
+            profileImage: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png",
+            about: "A yellow sea sponge who lives in a pineapple under the sea in the city of Bikini Bottom.",
+            hobbies: [
+                "Eat, Sleep, Study, Pray", 
+                "Workout, Basketball", 
+                "Watch movie/Series"
+            ],
+            education: "Coputer Science with a Specialization of Cybersecurity and Forensics at Asia Pacific Collge"
         }
-    },
-    template: `
-        <div class="chrome-window">
-            <div class="chrome-header">
-                <div class="tab">Sukuna - Fan Page</div>
-            </div>
-
-            <div class="address-bar-container">
-                <div class="address-bar">
-                    https://domain-expansion.com/sukuna
-                </div>
-            </div>
-
-            <div class="chrome-content">
-                <img :src="imageUrl" :alt="imageAlt" class="sukuna-img" />
-                <p class="caption">{{ description }}</p>
-            </div>
-        </div>
-    `
-}).mount('#app');
+    }
+}).mount('#app')
