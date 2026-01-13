@@ -5,7 +5,7 @@ createApp({
         return {
             imageUrl: 'https://wallpapercave.com/wp/wp8253134.jpg', // Placeholder Sukuna image
             imageAlt: 'Ryomen Sukuna',
-            description: 'The King of Curses'
+            description: 'Testing lang'
         }
     },
     template: `
