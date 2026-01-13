@@ -11,8 +11,8 @@ FoodItem.vue
 export default {
   data() {
     return {
-      name: 'Apples',
-      message: 'I like apples'
+      name: 'Mansanas',
+      message: 'I dont like Mansanas'
     }
   }
 };
