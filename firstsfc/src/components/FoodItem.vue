@@ -1,7 +1,7 @@
 FoodItem.vue
  
 <template>
-  <div class=Mansanas></div>>
+  <div class=Mansanas>
     <h2>{{ name }}</h2>
     <
     <p>{{ message }}</p>
