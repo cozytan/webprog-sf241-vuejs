@@ -1,8 +1,9 @@
 FoodItem.vue
  
 <template>
-  <div>
+  <div class=Mansanas></div>>
     <h2>{{ name }}</h2>
+    <
     <p>{{ message }}</p>
   </div>
 </template>
@@ -11,8 +12,8 @@ FoodItem.vue
 export default {
   data() {
     return {
-      name: 'Mansanas',
-      message: 'I dont like Mansanas'
+      name: 'Mansanas, ubas, kamote, patatas',
+      message: 'I dont like Mansanas, ubas, kamote, patatas'
     }
   }
 };
