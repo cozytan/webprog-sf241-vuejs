@@ -2,72 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Profile Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile - Klein De Guzman</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
 
-    <link rel="stylesheet" href="css/flexbox-grid.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/images.css">
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* 1. Profile Grid Layout (Responsive) */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .box h3 {
+            margin-top: 0;
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        /* 2. Custom Banner (Based on your image) */
+        .banner {
+            background-color: #C1E1C1; /* Light green */
+            padding: 10px 20px;
+            font-family: serif;
+            font-size: 1.1rem;
+            display: inline-block;
+            border: 1px solid #999;
+            border-bottom: none;
+        }
+
+        /* 3. Food Gallery Box (Based on your image) */
+        .gallery-wrapper {
+            background-color: #eeeeee; /* Light gray */
+            padding: 30px 10px;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .food-icon {
+            height: 60px; /* Adjust based on your image size */
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .food-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .banner {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .gallery-container {
+                gap: 20px;
+            }
+            .food-icon {
+                height: 45px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <h1>Personal Profile - Klein De Guzman</h1>
 
     <div class="container">
-
         <div class="box">
             <h3>1.) About Me</h3>
-            <p>Hello everyone!</p>
-            <p>(Do not include birthdate / age / contact information)</p>
+            <p>Hello everyone! I am a student at Asia Pacific College focusing on the technical side of the digital world.</p>
         </div>
 
         <div class="box">
-            <h3>2.) Education / Achievements</h3>
+            <h3>2.) Education</h3>
             <p><strong>Course:</strong></p>
-            <p>
-                Bachelor of Science in Computer Science<br>
-                With Specialization in Cyber Security and Forensics
-            </p>
+            <p>Bachelor of Science in Computer Science<br>
+               Specializing in Cyber Security and Forensics</p>
         </div>
 
         <div class="box">
             <h3>3.) IT Experience</h3>
-            <p>Python, kali, css, SQL, AI</p>
+            <p>Python, Kali Linux, CSS, SQL, and AI Integration.</p>
         </div>
 
         <div class="box">
-            <h3>4.) Hobbies and Interests</h3>
+            <h3>4.) Hobbies</h3>
             <ul>
-                <li>Sleeping</li>
-                <li>Exercise</li>
-                <li>Sports (Basketball, Billiards, Bowling, etc..)</li>
+                <li>Exercise & Sports (Basketball, Billiards)</li>
+                <li>Gaming & Coding</li>
                 <li>Pray</li>
-            
             </ul>
         </div>
 
         <div class="box">
-            <h3>5.) Goals in Life</h3>
-            <p>To live much healthier and To live where money isn't a problem</p>
-        </div>
-
-    </div>
-
-    
-    <div id="app2">
-        <div>
-            <img v-for="x in manyFoods" :src="x" :key="x">
+            <h3>5.) Goals</h3>
+            <p>To achieve financial freedom and maintain a healthy, balanced lifestyle.</p>
         </div>
     </div>
 
+    <div class="banner">
+        Happy New Year SF241!
+    </div>
+
+    <div id="app2" class="gallery-wrapper">
+        <div class="gallery-container">
+            <img v-for="food in manyFoods" :src="food" :key="food" class="food-icon" alt="Food Icon">
+        </div>
+    </div>
     <footer>
         <p>Asia Pacific College</p>
         <p><strong>What is up SF241!</strong></p>
     </footer>
 
-    
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp } = Vue;
 
-    <script src="js/images.js"></script>
+        createApp({
+            data() {
+                return {
+                    // Update these strings to match your actual file names
+                    manyFoods: [
+                        'img/burrito.png',
+                        'img/salad.png',
+                        'img/cake.png',
+                        'img/soup.png',
+                        'img/fish.png',
+                        'img/pizza.png',
+                        'img/rice.png'
+                    ]
+                }
+            }
+        }).mount('#app2');
+    </script>
 
 </body>
 </html>
