@@ -2,39 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spongebob Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="flex-layout.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Personal Profile Web Page</title>
+
+    <link rel="stylesheet" href="css/flexbox-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/images.css">
 </head>
 <body>
-    <div id="app" class="main-container">
-        <header class="flex-column-center">
-            <img :src="profileImage" alt="Profile" class="avatar">
-            <h1>{{ name }}</h1>
-        </header>
 
-        <main class="flex-container">
-            <section class="card">
-                <h2>About Me</h2>
-                <p>{{ about }}</p>
-            </section>
+    <h1>Personal Profile - Klein De Guzman</h1>
 
-            <section class="card">
-                <h2>Hobbies</h2>
-                <ul>
-                    <li v-for="hobby in hobbies" :key="hobby">{{ hobby }}</li>
-                </ul>
-            </section>
+    <div class="container">
 
-            <section class="card">
-                <h2>Education</h2>
-                <p>{{ education }}</p>
-            </section>
-        </main>
+        <div class="box">
+            <h3>1.) About Me</h3>
+            <p>Hello everyone!</p>
+            <p>(Do not include birthdate / age / contact information)</p>
+        </div>
+
+        <div class="box">
+            <h3>2.) Education / Achievements</h3>
+            <p><strong>Course:</strong></p>
+            <p>
+                Bachelor of Science in Computer Science<br>
+                With Specialization in Cyber Security and Forensics
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>3.) IT Experience</h3>
+            <p>Python, kali, css, SQL, AI</p>
+        </div>
+
+        <div class="box">
+            <h3>4.) Hobbies and Interests</h3>
+            <ul>
+                <li>Sleeping</li>
+                <li>Exercise</li>
+                <li>Sports (Basketball, Billiards, Bowling, etc..)</li>
+                <li>Pray</li>
+            
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>5.) Goals in Life</h3>
+            <p>To live much healthier and To live where money isn't a problem</p>
+        </div>
+
     </div>
 
-    <script src="app.js"></script>
+    
+    <div id="app2">
+        <div>
+            <img v-for="x in manyFoods" :src="x" :key="x">
+        </div>
+    </div>
+
+    <footer>
+        <p>Asia Pacific College</p>
+        <p><strong>What is up SF241!</strong></p>
+    </footer>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="js/images.js"></script>
+
 </body>
 </html>
