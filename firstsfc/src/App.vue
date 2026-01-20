@@ -1,5 +1,5 @@
 <template>
-  <h1>Prutas Lamang</h1>
+  <h1>Frutas</h1>
   <personal-profile/>
   <food-item/>
   <food-item2/>  
