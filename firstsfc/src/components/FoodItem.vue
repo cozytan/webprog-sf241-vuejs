@@ -12,8 +12,8 @@ FoodItem.vue
 export default {
   data() {
     return {
-      name: 'Mansanas, ubas, kamote, patatas',
-      message: 'I dont like Mansanas, ubas, kamote, patatas'
+      name: 'Santol, Ampalaya, Manok',
+      message: 'I like santol, Ampalaya, Manok'
     }
   }
 };
