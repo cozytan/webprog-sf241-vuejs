@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import FoodItem from './FoodItem.vue' 
-import personalprofile from './personalprofile.vue'
+// Make sure the paths match the actual location of the components
+import FoodItem from './components/FoodItem.vue' 
+import personalprofile from './components/personalprofile.vue'
 
 const app = createApp(App)
 

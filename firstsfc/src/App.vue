@@ -16,13 +16,19 @@
 import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
 
+// Declare the instruments array to store fetched data
 const instruments = ref([])
 
+// Fetch data from the "instruments" table in Supabase
 async function getInstruments() {
-  const { data } = await supabase.from('instruments').select()
+  const { data, error } = await supabase.from('instruments').select()
+  if (error) {
+    console.error(error)
+  }
   instruments.value = data
 }
 
+// Call the function when the component is mounted
 onMounted(() => {
   getInstruments()
 })

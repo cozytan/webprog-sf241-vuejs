@@ -1,0 +1,23 @@
+{
+  "name": "webprog-sf241-vuejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite", 
+    "build": "vite build", 
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cozytan/webprog-sf241-vuejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/cozytan/webprog-sf241-vuejs/issues"
+  },
+  "homepage": "https://github.com/cozytan/webprog-sf241-vuejs#readme"
+}
