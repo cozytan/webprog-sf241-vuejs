@@ -1,25 +1,23 @@
-FoodItem.vue
- 
 <template>
-  <div class=Prutas Lamang>
+  <div  class="Dragon fruit ">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
 </template>
- 
+
 <script>
 export default {
   data() {
     return {
-      name: 'Mango, Grapes',
-      message: 'I dont like Mango, Grapes'
+      name: 'Dragon fruit and Mango',
+      message: 'I don't like it'
     }
   }
 };
 </script>
- 
+
 <style>
-    .Prutas Lamang{
+  .Dragon fruit {
     border: dashed black 1px;
     display: inline-block;
     margin: 10px;

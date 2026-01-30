@@ -1,23 +1,23 @@
 {
-  "name": "webprog-sf241-vuejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite", 
-    "build": "vite build", 
-    "serve": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozytan/webprog-sf241-vuejs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "firstsfc",
+  "version": "0.0.0",
+  "private": true,
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/cozytan/webprog-sf241-vuejs/issues"
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   },
-  "homepage": "https://github.com/cozytan/webprog-sf241-vuejs#readme"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.90.1",
+    "vue": "^3.5.26"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "vite": "^7.3.0",
+    "vite-plugin-vue-devtools": "^8.0.5"
+  }
 }
